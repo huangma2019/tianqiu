@@ -1,0 +1,12 @@
+# TQ 天球仪 —— 在线星表数据源配置
+# 格式：显示名称|完整 URL|数据标签
+# 以 # 开头的行为注释；程序按书写顺序尝试，第一个成功即停止。
+# 数据标签相同的数据源重复抓取时会先删除旧数据再写入，不会重复堆积。
+# 支持：HYG / BSC5 的 CSV、VizieR 的 TSV、gzip 压缩的 .csv.gz、
+#       以及无表头的 name,ra,dec,mag 四列文本。
+# 若所在网络访问不了这些站点，可改成任意可下载的星表文件地址，
+# 或把文件下载到本地后使用界面上的「导入 CSV」。
+
+HYG v4.4 · Codeberg（119614 颗，gzip）|https://codeberg.org/astronexus/hyg/media/branch/main/data/hyg/CURRENT/hyg_v44.csv.gz|online:HYGv44
+HYG v4.2 · Codeberg 旧版备用|https://codeberg.org/astronexus/hyg/media/branch/main/data/hyg/OLDER/hyg_v42.csv.gz|online:HYGv42
+VizieR BSC5 · 耶鲁亮星表（9110 颗，TSV）|https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=V/50&-out=HR,Name,RAJ2000,DEJ2000,Vmag,SpType&-out.max=20000|online:V/50
